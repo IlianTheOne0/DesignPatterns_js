@@ -10,9 +10,9 @@ class CoffeModule
 		this.#orders = [];
 	}
 
-	getOrders() { console.log(this.#orders); return this.#orders; }
-	addOrder(order) { this.#orders.push(order); }
-	clearOrders() { this.#orders = []; }
+	getOrders() { return this.#orders; }
+	addOrder(order) { this.#orders.push(order); return true; }
+	clearOrders() { this.#orders = []; return true; }
 }
 
 export { CoffeModule };
